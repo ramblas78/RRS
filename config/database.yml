@@ -1,0 +1,35 @@
+
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
+#   # For details on connection pooling, see rails configuration guide
+#   # http://guides.rubyonrails.org/configuring.html#database-pooling
+#   pool: 5
+
+# development:
+#   <<: *default
+#   username: postgres
+#   password: postgres
+#   database: rrss_development
+
+# #test:
+#  #<<: *default
+#  #database: rrs_test
+
+# production:
+#   <<: *default
+#   database: rrs_production
+#   username: postgres
+#   password: postgres
+
+
+default: &default
+  adapter: postgresql
+  pool: 5
+  host: localhost
+  timeout: 5000
+  username: yuva
+
+development:
+  <<: *default
+  database: rrs_dev
