@@ -1,9 +1,20 @@
 <h2>Sign up</h2>
 
 <%= form_for(@host, url: registration_path(@host)) do |f| %>
+  <% if @host.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@host.errors.count, "error") %> prohibited this host from being saved:</h2>
+
+      <ul>
+      <% @host.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email %>*<br />
     <%= f.email_field :email, autofocus: true %>
   </div>
 
@@ -18,7 +29,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :password %>*
     <% if @validatable %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
@@ -26,7 +37,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation %>*<br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 

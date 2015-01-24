@@ -3,7 +3,7 @@
 <%= form_for(@host, url: registration_path(@host, id: @host.id), html: { method: :put }) do |f| %>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email %>*<br />
     <%= f.email_field :email, autofocus: true %>
   </div>
 
@@ -18,7 +18,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :password, "New Password" %><br/>
+    <%= f.label :password, "New Password (leave blank if you don't want to change it)" %><br/>
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
