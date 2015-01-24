@@ -31,6 +31,11 @@ gem 'spring',        group: :development
 gem 'devise'
 gem 'byebug'
 
+gem 'countries'
+gem 'country_select'
+
+gem 'fastspring-saasy'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
