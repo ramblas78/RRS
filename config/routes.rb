@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+  get 'hosts/index'
+  get 'hosts/new'
+  get 'host/:id' => "hosts#edit", as: "edit_host"
+
   resources :restaurants
 
-  devise_for :users
+  devise_for :users, controllers: { registrations: "registrations" }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

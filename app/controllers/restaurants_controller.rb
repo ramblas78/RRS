@@ -24,6 +24,7 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.new(restaurant_params)
     password = SecureRandom.hex
     @restaurant.create_user(:email=> @restaurant.email,:password=>password,:password_confirmation=> password)
+    @restaurant.user.add_role :admin
     UserMailer.welcome_email(@restaurant).deliver if @restaurant.save!
 		respond_with(@restaurant)
   end

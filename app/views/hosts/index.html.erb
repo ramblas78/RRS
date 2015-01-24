@@ -1,0 +1,32 @@
+<h1>Listing Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Login</th>
+      <th>Email</th>
+      <th>Name</th>
+      <th>Active</th>
+      <th>Registered</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hosts.each do |user| %>
+      <tr>
+        <td><b><%= user.email %></b></td>
+        <td><%= user.email %></td>
+        <td><%= user.name %></td>
+        <td><%= user.active %></td>
+        <td><%= user.created_at %></td>
+        <td><%= link_to 'Edit', edit_host_path(user) %></td>
+        <td><%= link_to 'Destroy', "/users?id=#{user.id}", data: { confirm: "Are you sure?" }, method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', hosts_new_path %>

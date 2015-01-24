@@ -1,0 +1,34 @@
+<h2>Sign up</h2>
+
+<%= form_for(@host, url: registration_path(@host, id: @host.id), html: { method: :put }) do |f| %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :language %><br />
+    <%= f.select :language, options_for_select([["English", "en"], ["Spanish", "sp"]]) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, "New Password" %><br/>
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation, "New Password" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Update User" %>
+  </div>
+<% end %>
+
