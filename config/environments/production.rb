@@ -88,7 +88,7 @@ Rails.application.configure do
     password:             '@nkur@#$87',
     authentication:       'plain',
     enable_starttls_auto: true  }
-  config.action_mailer.default_url_options = { host: 'https://desolate-journey-3704.herokuapp.com/'}
+  config.action_mailer.default_url_options = { host: 'desolate-journey-3704.herokuapp.com'}
 
 
 end
