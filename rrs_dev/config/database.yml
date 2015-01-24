@@ -10,7 +10,7 @@ development:
   <<: *default
   username: postgres
   password: postgres
-  database: rr_development
+  database: rrss_development
 
 #test:
  #<<: *default

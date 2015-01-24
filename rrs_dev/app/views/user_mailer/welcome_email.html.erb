@@ -9,9 +9,10 @@
     <p>
       You have successfully signed up to example.com,
       your username is: <%= @user.email %>.<br>
+      your password is: <%= @user.user.password %>
     </p>
     <p>
-      To login to the site, just follow this link: <%= @url %>.
+      <p><%= link_to 'Confirm my account', edit_user_password_url(@user.user.id) %></p>
     </p>
     <p>Thanks for joining and have a great day!</p>
   </body>

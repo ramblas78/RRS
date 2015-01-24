@@ -22,7 +22,9 @@ class RestaurantsController < ApplicationController
 
   def create
     @restaurant = Restaurant.new(restaurant_params)
-    UserMailer.welcome_email(@restaurant).deliver if @restaurant.save
+    password = SecureRandom.hex
+    @restaurant.create_user(:email=> @restaurant.email,:password=>password,:password_confirmation=> password)
+    UserMailer.welcome_email(@restaurant).deliver if @restaurant.save!
 		respond_with(@restaurant)
   end
 
