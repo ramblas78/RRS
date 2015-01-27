@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dinning_room.name %>
+</p>
+
+<p>
+  <strong>Widget:</strong>
+  <%= @dinning_room.widget %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @dinning_room.priority %>
+</p>
+
+<%= link_to 'Edit', edit_dinning_room_path(@dinning_room) %> |
+<%= link_to 'Back', dinning_rooms_path %>

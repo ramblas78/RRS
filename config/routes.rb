@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :dinning_rooms
+
   get 'hosts/index'
   get 'hosts/new'
   get 'host/:id' => "hosts#edit", as: "edit_host"

@@ -1,0 +1,29 @@
+<%= form_for(@dinning_room) do |f| %>
+  <% if @dinning_room.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dinning_room.errors.count, "error") %> prohibited this dinning_room from being saved:</h2>
+
+      <ul>
+      <% @dinning_room.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :widget %><br>
+    <%= f.check_box :widget %>
+  </div>
+  <div class="field">
+    <%= f.label :priority %><br>
+    <%= f.number_field :priority %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

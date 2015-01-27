@@ -35,6 +35,7 @@ gem 'countries'
 gem 'country_select'
 
 gem 'fastspring-saasy'
+gem 'will_paginate'
 
 gem 'rails_12factor', group: :production
 # Use ActiveModel has_secure_password
