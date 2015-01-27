@@ -28,8 +28,10 @@ default: &default
   pool: 5
   host: localhost
   timeout: 5000
-  username: yuva
+  
 
 development:
   <<: *default
   database: rrs_dev
+  username: postgres
+  password: postgres

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :bookings
+
   resources :dinning_rooms
 
   get 'hosts/index'

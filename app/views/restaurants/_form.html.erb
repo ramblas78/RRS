@@ -2,30 +2,31 @@
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
-    <%unless @restaurant.errors[:name].blank?%><%= @restaurant.errors[:name]%><%end%>
+    <%unless @restaurant.errors[:name].blank?%><div class="bg-danger"> <%= @restaurant.errors[:name]%> </div><%end%>
   </div>
   <div class="field">
     <%= f.label :country %><br>
     <%= f.country_select :country, prompt: 'Please select a country'%>
-    <% unless @restaurant.errors[:country].blank?%><%= @restaurant.errors[:country] %><%end%>
+  <% unless @restaurant.errors[:country].blank?%><div class="bg-danger"> <%= @restaurant.errors[:country] %> </div><%end%>
   </div>
   <div class="field">
     <%= f.label :address %><br>
-    <%= f.text_field :address %> <% unless @restaurant.errors[:address].blank?%><%= @restaurant.errors[:address]%><%end%>
+    <%= f.text_field :address %> 
+    <% unless @restaurant.errors[:address].blank?%><div class="bg-danger"> <%= @restaurant.errors[:address]%></div><%end%>
   </div>
   <div class="field">
     <%= f.label :phone %><br>
-    <%= f.text_field :phone %><% unless @restaurant.errors[:phone].blank?%><%= @restaurant.errors[:phone]%><%end%>
+    <%= f.text_field :phone %> <div class="bg-danger"> <% unless @restaurant.errors[:phone].blank?%><%= @restaurant.errors[:phone]%></div> <%end%>
   </div>
   <div class="field">
     <%= f.label :url %> <br>
     <font>http://</font><%= f.text_field :url %>
-    <% unless @restaurant.errors[:url].blank?%> <%= @restaurant.errors[:url]%><%end%>
+    <% unless @restaurant.errors[:url].blank?%><div class="bg-danger"> <%= @restaurant.errors[:url]%></div><%end%>
   </div>
   <div class="field">
     <%= f.label :email %><br>
     <%= f.text_field :email %>
-    <% unless @restaurant.errors[:email].blank? %><%= @restaurant.errors[:email]%><%end%>
+    <% unless @restaurant.errors[:email].blank? %><div class="bg-danger"> <%= @restaurant.errors[:email]%> </div><%end%>
   </div>
   <div class="actions">
     <%= f.submit %>

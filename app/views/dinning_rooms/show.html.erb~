@@ -15,5 +15,5 @@
   <%= @dinning_room.priority %>
 </p>
 
-<span class="btn btn-success"> <%= link_to 'Edit', edit_dinning_room_path(@dinning_room) %> |</span>
-<span class="btn btn-success"> <%= link_to 'Back', dinning_rooms_path %></span>
+<span class="btn btn-success"> <%= link_to 'Edit', edit_dinning_room_path(@dinning_room) %> </span>
+<%= link_to 'Back', dinning_rooms_path %>
